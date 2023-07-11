@@ -25,6 +25,7 @@
 		A297A71B2A5D134D0049D6D2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A297A71A2A5D134D0049D6D2 /* R.generated.swift */; };
 		A297A71D2A5D16550049D6D2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A297A71C2A5D16550049D6D2 /* HomeViewModel.swift */; };
 		A297A71F2A5D16670049D6D2 /* WeatherDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A297A71E2A5D16670049D6D2 /* WeatherDetailsViewModel.swift */; };
+		A297A7212A5D18500049D6D2 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A297A7202A5D18500049D6D2 /* RestService.swift */; };
 		A466BB43E21548728AD76C59 /* Pods_Empik_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1269B64C69E36A41AD8D8C8D /* Pods_Empik_Weather.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		A297A71A2A5D134D0049D6D2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		A297A71C2A5D16550049D6D2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A297A71E2A5D16670049D6D2 /* WeatherDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewModel.swift; sourceTree = "<group>"; };
+		A297A7202A5D18500049D6D2 /* RestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
 		EBDB8F1710D09179A0F7435B /* Pods-Empik Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Empik Weather.debug.xcconfig"; path = "Target Support Files/Pods-Empik Weather/Pods-Empik Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +188,7 @@
 		A2968DC92A5C41850013B6DC /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				A297A7202A5D18500049D6D2 /* RestService.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			files = (
 				A2968DC22A5C412D0013B6DC /* HomeViewController.swift in Sources */,
 				A2968DA02A5C1DAA0013B6DC /* AppDelegate.swift in Sources */,
+				A297A7212A5D18500049D6D2 /* RestService.swift in Sources */,
 				A297A71F2A5D16670049D6D2 /* WeatherDetailsViewModel.swift in Sources */,
 				A297A71D2A5D16550049D6D2 /* HomeViewModel.swift in Sources */,
 				A2968DC72A5C416C0013B6DC /* WeatherDetailsViewController.swift in Sources */,
