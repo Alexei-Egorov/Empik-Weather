@@ -26,6 +26,13 @@
 		A297A71D2A5D16550049D6D2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A297A71C2A5D16550049D6D2 /* HomeViewModel.swift */; };
 		A297A71F2A5D16670049D6D2 /* WeatherDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A297A71E2A5D16670049D6D2 /* WeatherDetailsViewModel.swift */; };
 		A297A7212A5D18500049D6D2 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A297A7202A5D18500049D6D2 /* RestService.swift */; };
+		A297A7252A5D2A0C0049D6D2 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A297A7242A5D2A0C0049D6D2 /* APIKey.swift */; };
+		A297A7272A5D777B0049D6D2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A297A7262A5D777B0049D6D2 /* Location.swift */; };
+		A297A7292A5D783D0049D6D2 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A297A7282A5D783D0049D6D2 /* LocationRepository.swift */; };
+		A297A72D2A5D79400049D6D2 /* RestService + LocationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A297A72C2A5D79400049D6D2 /* RestService + LocationExt.swift */; };
+		A297A7302A5D7AB40049D6D2 /* GetAutocompleteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A297A72F2A5D7AB40049D6D2 /* GetAutocompleteRequest.swift */; };
+		A297A7322A5D7B590049D6D2 /* GetAutocompleteParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A297A7312A5D7B590049D6D2 /* GetAutocompleteParameters.swift */; };
+		A297A7362A5E67D10049D6D2 /* Counrty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A297A7352A5E67D10049D6D2 /* Counrty.swift */; };
 		A466BB43E21548728AD76C59 /* Pods_Empik_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1269B64C69E36A41AD8D8C8D /* Pods_Empik_Weather.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +60,13 @@
 		A297A71C2A5D16550049D6D2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A297A71E2A5D16670049D6D2 /* WeatherDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewModel.swift; sourceTree = "<group>"; };
 		A297A7202A5D18500049D6D2 /* RestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
+		A297A7242A5D2A0C0049D6D2 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		A297A7262A5D777B0049D6D2 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		A297A7282A5D783D0049D6D2 /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
+		A297A72C2A5D79400049D6D2 /* RestService + LocationExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestService + LocationExt.swift"; sourceTree = "<group>"; };
+		A297A72F2A5D7AB40049D6D2 /* GetAutocompleteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAutocompleteRequest.swift; sourceTree = "<group>"; };
+		A297A7312A5D7B590049D6D2 /* GetAutocompleteParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAutocompleteParameters.swift; sourceTree = "<group>"; };
+		A297A7352A5E67D10049D6D2 /* Counrty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counrty.swift; sourceTree = "<group>"; };
 		EBDB8F1710D09179A0F7435B /* Pods-Empik Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Empik Weather.debug.xcconfig"; path = "Target Support Files/Pods-Empik Weather/Pods-Empik Weather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,8 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				A2968DC92A5C41850013B6DC /* Data */,
-				A2968DCA2A5C419F0013B6DC /* Utils */,
 				A2968DCB2A5C41B20013B6DC /* Domain */,
+				A2968DCA2A5C419F0013B6DC /* Utils */,
 				A2968DBA2A5C40AE0013B6DC /* Scenes */,
 				A2968DBB2A5C40B40013B6DC /* UI */,
 				A2968DB82A5C40720013B6DC /* Resources */,
@@ -188,7 +202,9 @@
 		A2968DC92A5C41850013B6DC /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				A297A7242A5D2A0C0049D6D2 /* APIKey.swift */,
 				A297A7202A5D18500049D6D2 /* RestService.swift */,
+				A297A72A2A5D78D60049D6D2 /* Location */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -203,6 +219,8 @@
 		A2968DCB2A5C41B20013B6DC /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				A297A7262A5D777B0049D6D2 /* Location.swift */,
+				A297A7352A5E67D10049D6D2 /* Counrty.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -216,6 +234,33 @@
 				A297A7122A5D0BA70049D6D2 /* SF-Pro-Text-Semibold.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A297A72A2A5D78D60049D6D2 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				A297A72B2A5D790C0049D6D2 /* Remote */,
+				A297A7282A5D783D0049D6D2 /* LocationRepository.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		A297A72B2A5D790C0049D6D2 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				A297A72E2A5D7A960049D6D2 /* Request */,
+				A297A72C2A5D79400049D6D2 /* RestService + LocationExt.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		A297A72E2A5D7A960049D6D2 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				A297A72F2A5D7AB40049D6D2 /* GetAutocompleteRequest.swift */,
+				A297A7312A5D7B590049D6D2 /* GetAutocompleteParameters.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,12 +405,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A297A7322A5D7B590049D6D2 /* GetAutocompleteParameters.swift in Sources */,
+				A297A7292A5D783D0049D6D2 /* LocationRepository.swift in Sources */,
 				A2968DC22A5C412D0013B6DC /* HomeViewController.swift in Sources */,
+				A297A7272A5D777B0049D6D2 /* Location.swift in Sources */,
+				A297A72D2A5D79400049D6D2 /* RestService + LocationExt.swift in Sources */,
 				A2968DA02A5C1DAA0013B6DC /* AppDelegate.swift in Sources */,
 				A297A7212A5D18500049D6D2 /* RestService.swift in Sources */,
 				A297A71F2A5D16670049D6D2 /* WeatherDetailsViewModel.swift in Sources */,
+				A297A7252A5D2A0C0049D6D2 /* APIKey.swift in Sources */,
 				A297A71D2A5D16550049D6D2 /* HomeViewModel.swift in Sources */,
 				A2968DC72A5C416C0013B6DC /* WeatherDetailsViewController.swift in Sources */,
+				A297A7302A5D7AB40049D6D2 /* GetAutocompleteRequest.swift in Sources */,
+				A297A7362A5E67D10049D6D2 /* Counrty.swift in Sources */,
 				A2968DBE2A5C410A0013B6DC /* SplashScreenViewController.swift in Sources */,
 				A2968DB72A5C395D0013B6DC /* SceneDelegate.swift in Sources */,
 				A297A71B2A5D134D0049D6D2 /* R.generated.swift in Sources */,
