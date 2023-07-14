@@ -48,40 +48,33 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Provide city name" translatesAutoresizingMaskIntoConstraints="NO" id="q4D-Ur-aXp">
-                    <rect key="frame" x="0.0" y="155" width="393" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Provide city name" translatesAutoresizingMaskIntoConstraints="NO" id="q4D-Ur-aXp">
+                    <rect key="frame" x="32" y="151" width="329" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="chH-I8-uV2"/>
+                    </constraints>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="JOg-K2-LSg"/>
                     </connections>
                 </searchBar>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwu-eq-aEI">
-                    <rect key="frame" x="131" y="219" width="132" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemGreenColor"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Make Request">
-                        <color key="baseForegroundColor" systemColor="systemGroupedBackgroundColor"/>
-                    </buttonConfiguration>
-                    <connections>
-                        <action selector="makeRequestTapped:" destination="-1" eventType="touchUpInside" id="JJe-ZA-r82"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9BW-gJ-9bY" secondAttribute="trailing" id="8dJ-MB-VSV"/>
+                <constraint firstItem="q4D-Ur-aXp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="MYV-7F-Z8Y"/>
                 <constraint firstItem="hKy-Dc-Op7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VsZ-y9-JHw"/>
                 <constraint firstItem="9BW-gJ-9bY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="awr-Cc-5n6"/>
                 <constraint firstItem="9BW-gJ-9bY" firstAttribute="top" secondItem="T8h-1h-ASq" secondAttribute="bottom" constant="10" id="c60-KN-tPt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9BW-gJ-9bY" secondAttribute="bottom" id="shI-xj-5nw"/>
                 <constraint firstItem="T8h-1h-ASq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="son-KR-v0l"/>
+                <constraint firstItem="q4D-Ur-aXp" firstAttribute="top" secondItem="hKy-Dc-Op7" secondAttribute="bottom" constant="40" id="v3x-er-iPf"/>
                 <constraint firstItem="hKy-Dc-Op7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="wjz-ih-IDf"/>
                 <constraint firstItem="9BW-gJ-9bY" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.6" id="y7J-37-uwP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="q4D-Ur-aXp" secondAttribute="trailing" constant="32" id="zff-aE-4MX"/>
             </constraints>
-            <point key="canvasLocation" x="138" y="20"/>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
@@ -90,12 +83,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

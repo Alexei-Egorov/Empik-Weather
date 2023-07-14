@@ -12,7 +12,11 @@ class SplashScreenViewController: UIViewController {
     private func setupView() {
         let restService = RestService.shared
         let locationRepository = LocationRepository(remoteService: restService)
-        let homeVM = HomeViewModel(locationRepository: locationRepository)
+        let conditionsRepository = ConditionsRepository(remoteService: restService)
+        let forecastRepository = ForecastRepository(remoteService: restService)
+        let homeVM = HomeViewModel(locationRepository: locationRepository,
+                                   conditionsRepository: conditionsRepository,
+                                   forecastRepository: forecastRepository)
         let homeVC = HomeViewController(viewModel: homeVM)
         self.show(homeVC, sender: nil)
     }

@@ -32,7 +32,7 @@ Pods/
 *.xcworkspace
 
 #API Key
-Empik\ Weather/Data/APIKey.swift
+Empik\ Weather/DataSource/APIKey.swift
 
 # Carthage
 #
