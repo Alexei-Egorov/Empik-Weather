@@ -1,3 +1,3 @@
 struct APIKey {
-    static let apiKey = ""
+    static var apiKey: String? = nil
 }

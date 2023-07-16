@@ -50,6 +50,12 @@
 		A2B967082A60107B000DEC54 /* UISearchBar + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B967072A60107B000DEC54 /* UISearchBar + Ext.swift */; };
 		A2B98F112A63D069009B07D2 /* Date + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98F102A63D069009B07D2 /* Date + Ext.swift */; };
 		A2B98F142A6415C3009B07D2 /* TemperatureColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98F132A6415C3009B07D2 /* TemperatureColor.swift */; };
+		A2B98F162A642308009B07D2 /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98F152A642308009B07D2 /* UIViewController + Ext.swift */; };
+		A2B98F192A643683009B07D2 /* ErrorRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98F182A643683009B07D2 /* ErrorRemote.swift */; };
+		A2B98F1C2A644233009B07D2 /* ApplicationDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98F1B2A644233009B07D2 /* ApplicationDefaults.swift */; };
+		A2B98F1E2A644332009B07D2 /* SearchHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98F1D2A644332009B07D2 /* SearchHistory.swift */; };
+		A2B98F262A644C31009B07D2 /* SearchHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98F242A644C31009B07D2 /* SearchHistoryCell.swift */; };
+		A2B98F272A644C31009B07D2 /* SearchHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B98F252A644C31009B07D2 /* SearchHistoryCell.xib */; };
 		A2DA4F132A6106EC005CE349 /* WeatherDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA4F122A6106EC005CE349 /* WeatherDetails.swift */; };
 		A2DA4F152A61082A005CE349 /* CurrentCoditionsRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA4F142A61082A005CE349 /* CurrentCoditionsRemote.swift */; };
 		A2DA4F182A610B96005CE349 /* NetworkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA4F172A610B96005CE349 /* NetworkDefaults.swift */; };
@@ -114,6 +120,12 @@
 		A2B967072A60107B000DEC54 /* UISearchBar + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar + Ext.swift"; sourceTree = "<group>"; };
 		A2B98F102A63D069009B07D2 /* Date + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Ext.swift"; sourceTree = "<group>"; };
 		A2B98F132A6415C3009B07D2 /* TemperatureColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureColor.swift; sourceTree = "<group>"; };
+		A2B98F152A642308009B07D2 /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
+		A2B98F182A643683009B07D2 /* ErrorRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorRemote.swift; sourceTree = "<group>"; };
+		A2B98F1B2A644233009B07D2 /* ApplicationDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDefaults.swift; sourceTree = "<group>"; };
+		A2B98F1D2A644332009B07D2 /* SearchHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistory.swift; sourceTree = "<group>"; };
+		A2B98F242A644C31009B07D2 /* SearchHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryCell.swift; sourceTree = "<group>"; };
+		A2B98F252A644C31009B07D2 /* SearchHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHistoryCell.xib; sourceTree = "<group>"; };
 		A2DA4F122A6106EC005CE349 /* WeatherDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetails.swift; sourceTree = "<group>"; };
 		A2DA4F142A61082A005CE349 /* CurrentCoditionsRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCoditionsRemote.swift; sourceTree = "<group>"; };
 		A2DA4F172A610B96005CE349 /* NetworkDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDefaults.swift; sourceTree = "<group>"; };
@@ -267,6 +279,7 @@
 				A27ECEE32A62EAFC001DB999 /* TodaysDetailsCell */,
 				A27ECEE82A62FDA6001DB999 /* DailyForecastsCell */,
 				A27ECEED2A62FF78001DB999 /* ForecastCell */,
+				A2B98F1F2A644A5F009B07D2 /* SearchHistoryCell */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -305,9 +318,11 @@
 				A297A7242A5D2A0C0049D6D2 /* APIKey.swift */,
 				A2DA4F172A610B96005CE349 /* NetworkDefaults.swift */,
 				A297A7202A5D18500049D6D2 /* RestService.swift */,
+				A2B98F172A64365D009B07D2 /* ErrorRemote */,
 				A297A72A2A5D78D60049D6D2 /* Location */,
 				A2DA4F162A6108D2005CE349 /* CurrentConditions */,
 				A2DA4F232A612820005CE349 /* Forecast */,
+				A2B98F1A2A6441C8009B07D2 /* UserDefaults */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -405,6 +420,7 @@
 				A2B967072A60107B000DEC54 /* UISearchBar + Ext.swift */,
 				A27ECEDF2A62C1F2001DB999 /* DateFormatter + Ext.swift */,
 				A2B98F102A63D069009B07D2 /* Date + Ext.swift */,
+				A2B98F152A642308009B07D2 /* UIViewController + Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -415,6 +431,32 @@
 				A2B98F132A6415C3009B07D2 /* TemperatureColor.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A2B98F172A64365D009B07D2 /* ErrorRemote */ = {
+			isa = PBXGroup;
+			children = (
+				A2B98F182A643683009B07D2 /* ErrorRemote.swift */,
+			);
+			path = ErrorRemote;
+			sourceTree = "<group>";
+		};
+		A2B98F1A2A6441C8009B07D2 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				A2B98F1B2A644233009B07D2 /* ApplicationDefaults.swift */,
+				A2B98F1D2A644332009B07D2 /* SearchHistory.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		A2B98F1F2A644A5F009B07D2 /* SearchHistoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				A2B98F242A644C31009B07D2 /* SearchHistoryCell.swift */,
+				A2B98F252A644C31009B07D2 /* SearchHistoryCell.xib */,
+			);
+			path = SearchHistoryCell;
 			sourceTree = "<group>";
 		};
 		A2DA4F162A6108D2005CE349 /* CurrentConditions */ = {
@@ -555,6 +597,7 @@
 				A297A7192A5D0D520049D6D2 /* Colors.xcassets in Resources */,
 				A2968DA92A5C1DAB0013B6DC /* Assets.xcassets in Resources */,
 				A2B967002A5FBCE4000DEC54 /* AutocompletePopupView.xib in Resources */,
+				A2B98F272A644C31009B07D2 /* SearchHistoryCell.xib in Resources */,
 				A297A7172A5D0BA70049D6D2 /* SF-Pro-Text-Regular.otf in Resources */,
 				A297A7152A5D0BA70049D6D2 /* SF-Pro-Text-Medium.otf in Resources */,
 				A2968DC32A5C412D0013B6DC /* HomeViewController.xib in Resources */,
@@ -635,6 +678,7 @@
 				A2DA4F182A610B96005CE349 /* NetworkDefaults.swift in Sources */,
 				A2968DC22A5C412D0013B6DC /* HomeViewController.swift in Sources */,
 				A297A7272A5D777B0049D6D2 /* Location.swift in Sources */,
+				A2B98F192A643683009B07D2 /* ErrorRemote.swift in Sources */,
 				A2B966FE2A5FBC74000DEC54 /* AutocompletePopupView.swift in Sources */,
 				A297A72D2A5D79400049D6D2 /* RestService+LocationExt.swift in Sources */,
 				A2DA4F202A610F69005CE349 /* GetCurrentConditionsParameters.swift in Sources */,
@@ -650,14 +694,18 @@
 				A297A71D2A5D16550049D6D2 /* HomeViewModel.swift in Sources */,
 				A27ECEDE2A62BE6A001DB999 /* CurrentConditions.swift in Sources */,
 				A2DA4F132A6106EC005CE349 /* WeatherDetails.swift in Sources */,
+				A2B98F1E2A644332009B07D2 /* SearchHistory.swift in Sources */,
 				A2DA4F322A615937005CE349 /* ForecastParameters.swift in Sources */,
 				A2DA4F1A2A610E23005CE349 /* ConditionsRepository.swift in Sources */,
 				A2DA4F152A61082A005CE349 /* CurrentCoditionsRemote.swift in Sources */,
 				A2DA4F272A612A51005CE349 /* DailyForecast.swift in Sources */,
 				A2968DC72A5C416C0013B6DC /* WeatherDetailsViewController.swift in Sources */,
+				A2B98F162A642308009B07D2 /* UIViewController + Ext.swift in Sources */,
 				A27ECEF02A62FF93001DB999 /* ForecastCell.swift in Sources */,
 				A27ECEEB2A62FDE8001DB999 /* DailyForecastsCell.swift in Sources */,
 				A297A7302A5D7AB40049D6D2 /* GetAutocompleteRequest.swift in Sources */,
+				A2B98F262A644C31009B07D2 /* SearchHistoryCell.swift in Sources */,
+				A2B98F1C2A644233009B07D2 /* ApplicationDefaults.swift in Sources */,
 				A2B967082A60107B000DEC54 /* UISearchBar + Ext.swift in Sources */,
 				A27ECEE62A62EB45001DB999 /* TodaysDetailsCell.swift in Sources */,
 				A2B98F112A63D069009B07D2 /* Date + Ext.swift in Sources */,

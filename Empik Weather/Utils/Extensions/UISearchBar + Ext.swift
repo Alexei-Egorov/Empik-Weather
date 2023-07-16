@@ -25,12 +25,10 @@ extension UISearchBar {
             if newValue {
                 if activityIndicator == nil {
                     let newActivityIndicator = UIActivityIndicatorView(style: .gray)
-                    newActivityIndicator.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
                     newActivityIndicator.startAnimating()
-                    newActivityIndicator.backgroundColor = UIColor.white
                     textField?.leftView?.addSubview(newActivityIndicator)
                     let leftViewSize = textField?.leftView?.frame.size ?? CGSize.zero
-                    newActivityIndicator.center = CGPoint(x: leftViewSize.width/2, y: leftViewSize.height/2)
+                    newActivityIndicator.center = CGPoint(x: leftViewSize.width/2, y: 0)
                 }
             } else {
                 activityIndicator?.removeFromSuperview()

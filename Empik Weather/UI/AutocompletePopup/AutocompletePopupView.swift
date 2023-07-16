@@ -65,6 +65,5 @@ extension AutocompletePopupView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedLocation = data![indexPath.row]
         delegate.didSelectLocation(selectedLocation)
-        self.removeFromSuperview()
     }
 }

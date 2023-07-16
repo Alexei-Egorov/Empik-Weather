@@ -6,6 +6,6 @@ class ForecastRequest: APIRequest {
     var version: String = "1.0"
     
     init(parameters: ForecastParameters) {
-        self.path += "\(parameters.cityKey)?language=\(parameters.language)&details=\(parameters.details)&metric=\(parameters.metric)&apikey=\(APIKey.apiKey)"
+        self.path += "\(parameters.cityKey)?language=\(parameters.language)&details=\(parameters.details)&metric=\(parameters.metric)"
     }
 }

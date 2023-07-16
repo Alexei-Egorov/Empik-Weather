@@ -6,6 +6,6 @@ class GetCurrentConditionsRequest: APIRequest {
     var version: String = "1.0"
     
     init(parameters: GetCurrentConditionsParameters) {
-        self.path += "\(parameters.cityKey)/?language=\(parameters.language)&details=\(parameters.details)&apikey=\(APIKey.apiKey)"
+        self.path += "\(parameters.cityKey)/?language=\(parameters.language)&details=\(parameters.details)"
     }
 }

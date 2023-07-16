@@ -23,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        UserDefaults.standard.synchronize()
+    }
 
     // MARK: UISceneSession Lifecycle
     @available(iOS 13.0, *)

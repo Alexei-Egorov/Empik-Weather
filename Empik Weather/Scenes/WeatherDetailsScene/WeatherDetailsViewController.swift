@@ -35,8 +35,18 @@ class WeatherDetailsViewController: UIViewController {
         collectionView.register(UINib(nibName: R.nib.todaysDetailsCell.name, bundle: nil), forCellWithReuseIdentifier: R.nib.todaysDetailsCell.name)
         collectionView.register(UINib(nibName: R.nib.dailyForecastsCell.name, bundle: nil), forCellWithReuseIdentifier: R.nib.dailyForecastsCell.name)
         
-        
+        setupNavigationBar()
         setupView()
+    }
+    
+    private func setupNavigationBar() {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        
+        let titleLabel = UILabel()
+        titleLabel.text = viewModel.weatherDetails.cityName
+        titleLabel.font = R.font.sfProTextBold(size: 22)
+        titleLabel.textColor = R.color.primary()
+        navigationItem.titleView = titleLabel
     }
 
     private func setupView() {
@@ -54,7 +64,6 @@ class WeatherDetailsViewController: UIViewController {
         flowLayout.sectionInset = UIEdgeInsets(top: 5, left: 32, bottom: 5, right: 32)
         collectionView.setCollectionViewLayout(flowLayout, animated: false)
     }
-
 }
 
 

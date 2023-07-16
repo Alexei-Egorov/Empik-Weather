@@ -6,6 +6,6 @@ class GetAutocompleteRequest: APIRequest {
     var version: String = "1.0"
     
     init(parameters: GetAutocompleteParameters) {
-        self.path += "?q=\(parameters.q)&language=\(parameters.language)&apikey=\(APIKey.apiKey)"
+        self.path += "?q=\(parameters.q)&language=\(parameters.language)"
     }
 }
