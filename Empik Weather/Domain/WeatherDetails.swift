@@ -1,4 +1,4 @@
 struct WeatherDetails {
-    var currentCoditions: CurrentConditions?
-    var todaysForecast: TodaysForecast?
+    var currentCoditions: CurrentConditions!
+    var dailyForecasts: [DailyForecast] = []
 }

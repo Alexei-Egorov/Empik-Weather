@@ -24,7 +24,7 @@ struct Metric: Decodable {
     }
 }
 
-struct CurrentConditions: Decodable {    
+struct CurrentConditionsRemote: Decodable {    
     let description: String
     let weatherIcon: Int
     let temperature: Metric

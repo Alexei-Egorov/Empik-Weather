@@ -27,21 +27,43 @@ struct TemperatureRemote: Decodable {
     }
 }
 
-struct TodaysForecastRemote: Decodable {
-    let temperature: TemperatureRemote
+struct DayRemote: Decodable {
+    let icon: Int
     
     enum CodingKeys: String, CodingKey {
-        case temperature = "Temperature"
+        case icon = "Icon"
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.icon = try container.decode(Int.self, forKey: .icon)
+    }
+}
+
+struct DailyForecastRemote: Decodable {
+    let date: String
+    let temperature: TemperatureRemote
+    let day: DayRemote
+    let night: DayRemote
+    
+    enum CodingKeys: String, CodingKey {
+        case date = "Date"
+        case temperature = "Temperature"
+        case day = "Day"
+        case night = "Night"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.date = try container.decode(String.self, forKey: .date)
         self.temperature = try container.decode(TemperatureRemote.self, forKey: .temperature)
+        self.day = try container.decode(DayRemote.self, forKey: .day)
+        self.night = try container.decode(DayRemote.self, forKey: .night)
     }
 }
 
 struct ForecastRemote: Decodable {
-    let todaysForecast: [TodaysForecastRemote]
+    let dailyForecasts: [DailyForecastRemote]
     
     enum CodingKeys: String, CodingKey {
         case todaysForecast = "DailyForecasts"
@@ -49,6 +71,6 @@ struct ForecastRemote: Decodable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.todaysForecast = try container.decode([TodaysForecastRemote].self, forKey: .todaysForecast)
+        self.dailyForecasts = try container.decode([DailyForecastRemote].self, forKey: .todaysForecast)
     }
 }

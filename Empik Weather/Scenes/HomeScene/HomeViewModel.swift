@@ -15,23 +15,20 @@ class HomeViewModel {
         locationRepository.getAutocomplite(from: text, completion: completion)
     }
     
-    private func getCurrentConditions(forCityKey cityKey: String, completion: @escaping (Result<[CurrentConditions], Error>) -> Void) {
+    private func getCurrentConditions(forCityKey cityKey: String, completion: @escaping (Result<CurrentConditions, Error>) -> Void) {
         conditionsRepository.getCurrentConditions(forCityKey: cityKey, completion: completion)
     }
     
-    private func getTodaysForecast(forCityKey cityKey: String, completion: @escaping (Result<TodaysForecast, Error>) -> Void) {
+    private func getTodaysForecast(forCityKey cityKey: String, completion: @escaping (Result<[DailyForecast], Error>) -> Void) {
         forecastRepository.getTodaysForecast(forCityKey: cityKey, completion: completion)
     }
     
     public func fulfillData(forCityKey cityKey: String, completion: @escaping (Result<WeatherDetails, Error>) -> Void) {
-        getCurrentConditions(forCityKey: cityKey) { [weak self] (result: Result<[CurrentConditions], Error>) in
+        getCurrentConditions(forCityKey: cityKey) { [weak self] (result: Result<CurrentConditions, Error>) in
             guard let sSelf = self else { return }
             switch result {
             case .success(let conditions):
-                guard let currentCondition = conditions.first else {
-                    fatalError("Could not find current weather condition")
-                }
-                sSelf.weatherDetails.currentCoditions = currentCondition
+                sSelf.weatherDetails.currentCoditions = conditions
                 sSelf.requestsChain["currentConditions"] = true
                 sSelf.checkForChainCompletion(completion: completion)
             case .failure(let failure):
@@ -39,10 +36,10 @@ class HomeViewModel {
             }
         }
         
-        getTodaysForecast(forCityKey: cityKey) { [weak self] (result: Result<TodaysForecast, Error>) in
+        getTodaysForecast(forCityKey: cityKey) { [weak self] (result: Result<[DailyForecast], Error>) in
             switch result {
-            case .success(let forecast):
-                self?.weatherDetails.todaysForecast = forecast
+            case .success(let forecasts):
+                self?.weatherDetails.dailyForecasts = forecasts
                 self?.requestsChain["dayForecast"] = true
                 self?.checkForChainCompletion(completion: completion)
             case .failure(let failure):

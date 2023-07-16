@@ -1,6 +1,6 @@
 class ForecastRequest: APIRequest {
     var method: HTTPMethod = .get
-    var path: String = "forecasts/v1/daily/1day/"
+    var path: String = "forecasts/v1/daily/5day/"
     var parameters: [String : Any] = [String: Any]()
     var authorizationRequired: Bool = false
     var version: String = "1.0"

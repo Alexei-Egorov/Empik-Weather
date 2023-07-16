@@ -61,10 +61,16 @@ class HomeViewController: UIViewController {
     private func getWeatherDetails(forCityKey cityKey: String) {
         displayLoadingView()
         viewModel.fulfillData(forCityKey: cityKey) { [weak self] (result: Result<WeatherDetails, Error>) in
+            self?.hideLoadingView()
             switch result {
-            case .success(let weather):
-                print("got weather: \(weather)")
+            case .success(let weatherDetails):
+                DispatchQueue.main.async {
+                    let weatherDetailsVM = WeatherDetailsViewModel(weatherDetails: weatherDetails)
+                    let weatherDetailsVC = WeatherDetailsViewController(viewModel: weatherDetailsVM)
+                    self?.show(weatherDetailsVC, sender: nil)
+                }
             case .failure(let failure):
+                //TODO: create failure popup
                 print("got failure: \(failure)")
             }
         }

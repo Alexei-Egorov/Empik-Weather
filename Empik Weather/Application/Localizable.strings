@@ -2,3 +2,7 @@
 "EmpikWeather" = "Empik Weather";
 "ProvideCityName" = "Provide city name";
 "SearchHistory" = "Search history";
+
+//Details Scene
+"Day" = "Day";
+"Night" = "Night";
