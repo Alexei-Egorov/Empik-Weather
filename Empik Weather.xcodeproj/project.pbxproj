@@ -50,7 +50,6 @@
 		A2B967082A60107B000DEC54 /* UISearchBar + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B967072A60107B000DEC54 /* UISearchBar + Ext.swift */; };
 		A2B98F112A63D069009B07D2 /* Date + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98F102A63D069009B07D2 /* Date + Ext.swift */; };
 		A2B98F142A6415C3009B07D2 /* TemperatureColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98F132A6415C3009B07D2 /* TemperatureColor.swift */; };
-		A2B98F162A642308009B07D2 /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98F152A642308009B07D2 /* UIViewController + Ext.swift */; };
 		A2B98F192A643683009B07D2 /* ErrorRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98F182A643683009B07D2 /* ErrorRemote.swift */; };
 		A2B98F1C2A644233009B07D2 /* ApplicationDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98F1B2A644233009B07D2 /* ApplicationDefaults.swift */; };
 		A2B98F1E2A644332009B07D2 /* SearchHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98F1D2A644332009B07D2 /* SearchHistory.swift */; };
@@ -120,7 +119,6 @@
 		A2B967072A60107B000DEC54 /* UISearchBar + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar + Ext.swift"; sourceTree = "<group>"; };
 		A2B98F102A63D069009B07D2 /* Date + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Ext.swift"; sourceTree = "<group>"; };
 		A2B98F132A6415C3009B07D2 /* TemperatureColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureColor.swift; sourceTree = "<group>"; };
-		A2B98F152A642308009B07D2 /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
 		A2B98F182A643683009B07D2 /* ErrorRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorRemote.swift; sourceTree = "<group>"; };
 		A2B98F1B2A644233009B07D2 /* ApplicationDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDefaults.swift; sourceTree = "<group>"; };
 		A2B98F1D2A644332009B07D2 /* SearchHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistory.swift; sourceTree = "<group>"; };
@@ -420,7 +418,6 @@
 				A2B967072A60107B000DEC54 /* UISearchBar + Ext.swift */,
 				A27ECEDF2A62C1F2001DB999 /* DateFormatter + Ext.swift */,
 				A2B98F102A63D069009B07D2 /* Date + Ext.swift */,
-				A2B98F152A642308009B07D2 /* UIViewController + Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -700,7 +697,6 @@
 				A2DA4F152A61082A005CE349 /* CurrentCoditionsRemote.swift in Sources */,
 				A2DA4F272A612A51005CE349 /* DailyForecast.swift in Sources */,
 				A2968DC72A5C416C0013B6DC /* WeatherDetailsViewController.swift in Sources */,
-				A2B98F162A642308009B07D2 /* UIViewController + Ext.swift in Sources */,
 				A27ECEF02A62FF93001DB999 /* ForecastCell.swift in Sources */,
 				A27ECEEB2A62FDE8001DB999 /* DailyForecastsCell.swift in Sources */,
 				A297A7302A5D7AB40049D6D2 /* GetAutocompleteRequest.swift in Sources */,

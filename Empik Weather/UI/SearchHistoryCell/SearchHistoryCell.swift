@@ -7,7 +7,7 @@ class SearchHistoryCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.layer.cornerRadius = 10
+        self.contentView.layer.cornerRadius = 10
     }
 
     

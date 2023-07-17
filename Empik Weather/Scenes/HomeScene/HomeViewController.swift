@@ -38,7 +38,7 @@ class HomeViewController: UIViewController {
         
         tableView.register(UINib(nibName: R.nib.searchHistoryCell.name, bundle: nil), forCellReuseIdentifier: R.nib.searchHistoryCell.name)
         
-        searchHistoryCities = viewModel.searchHistory.keys.sorted()
+        loadSearchHistoryCities()
         
         setupView()
     }
@@ -57,8 +57,11 @@ class HomeViewController: UIViewController {
     }
     
     private func setupView() {
-        self.addHidingKeyboardOnTap()
         setupNamings()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
 
     private func setupNamings() {
@@ -102,6 +105,11 @@ class HomeViewController: UIViewController {
         }
     }
     
+    private func loadSearchHistoryCities() {
+        searchHistoryCities = viewModel.searchHistory.keys.sorted()
+        tableView.reloadData()
+    }
+    
     private func showPopup() {
         let animator = UIViewPropertyAnimator(duration: 0.4, curve: .easeInOut) {
             let origin = self.autocompletePopup.frame.origin
@@ -138,6 +146,9 @@ class HomeViewController: UIViewController {
         }
     }
 
+    @objc func dismissKeyboard() {
+        searchBar.textField?.resignFirstResponder()
+    }
 }
 
 
@@ -171,6 +182,7 @@ extension HomeViewController: AutocompletePopupDelegate {
     func didSelectLocation(_ location: Location) {
         searchBar.text = location.cityName
         viewModel.appendToSearchHistory(cityName: location.cityName, cityKey: location.key)
+        loadSearchHistoryCities()
         getWeatherDetails(cityName: location.cityName, cityKey: location.key)
         hidePopup()
     }
@@ -197,6 +209,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let selectedCityKey = viewModel.searchHistory[selectedCityName] else {
             fatalError("Could not find key for city")
         }
-        getWeatherDetails(cityName: selectedCityKey, cityKey: selectedCityKey)
+        getWeatherDetails(cityName: selectedCityName, cityKey: selectedCityKey)
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }

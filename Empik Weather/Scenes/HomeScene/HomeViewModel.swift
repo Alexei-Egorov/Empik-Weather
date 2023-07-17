@@ -14,6 +14,7 @@ class HomeViewModel {
         self.locationRepository = locationRepository
         self.conditionsRepository = conditionsRepository
         self.forecastRepository = forecastRepository
+        loadSearchHistory()
     }
     
     public func getAutocomplete(from text: String, completion: @escaping (Result<[Location], Error>) -> Void) {
